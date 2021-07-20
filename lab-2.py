@@ -1,5 +1,6 @@
 
-operations_count = 0
+import config
+
 
 def main():
     ask_again = True
@@ -13,15 +14,17 @@ def main():
             ask_again = True
         else:
             ask_again = False
-            print("You performed " + str(operations_count) + " operations, bye!")
+            strings = ['You performed ', str(config.operations_count), ' operations, bye!']
+            print(str.join())
 
 
 def perform_division(a,b):
-    global operations_count
+    config.operations_count
+    config.operations_count += 1
     try:
-        operations_count += 1
         return int(a)/int(b)
-    except Exception as e:
+    except ZeroDivisionError as e:
+        logger.exception('ZeroDivisionError:')
         pass
 
 
