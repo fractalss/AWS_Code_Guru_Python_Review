@@ -1,0 +1,1 @@
+operations_count = 0 # Default value of the operations_count configuration setting
